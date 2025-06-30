@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1CgHdpSwn1UQeNaGzn4hYEEEw3KMDb4A8
 """
 
-# 📊 Análise da COVID-19 no Brasil
+# Análise da COVID-19 no Brasil
 # Autor: Ana Caroline de Morais Pimentel
 
 import pandas as pd
@@ -18,24 +18,24 @@ import seaborn as sns
 sns.set(style="darkgrid")
 plt.rcParams['figure.figsize'] = (12, 5)
 
-# 🚀 Lê os dados diretamente da internet
+# Lê os dados diretamente da internet
 url = "https://covid.ourworldindata.org/data/owid-covid-data.csv"
 df = pd.read_csv(url)
 
-# 👀 Verifica nomes de países disponíveis (opcional, para entender o dataset)
+# Verifica nomes de países disponíveis (opcional, para entender o dataset)
 # print(df['location'].unique())
 
-# 🔍 Filtra apenas o Brasil (tratando o nome corretamente)
+# Filtra apenas o Brasil (tratando o nome corretamente)
 df_brasil = df[df['location'].str.lower() == 'brazil'].copy()
 
 # Converte datas e seleciona colunas principais
 df_brasil['date'] = pd.to_datetime(df_brasil['date'])
 df_brasil = df_brasil[['date', 'new_cases', 'new_deaths', 'total_vaccinations']]
 
-# 🧼 Remove valores ausentes
+# Remove valores ausentes
 df_brasil = df_brasil.fillna(0)
 
-# 📈 Gráfico: Novos casos por dia
+# Gráfico: Novos casos por dia
 plt.figure()
 sns.lineplot(data=df_brasil, x='date', y='new_cases', color='blue', label='Novos casos')
 plt.title('Novos casos de COVID-19 no Brasil')
@@ -44,7 +44,7 @@ plt.ylabel('Casos')
 plt.tight_layout()
 plt.show()
 
-# 📈 Gráfico: Novas mortes por dia
+# Gráfico: Novas mortes por dia
 plt.figure()
 sns.lineplot(data=df_brasil, x='date', y='new_deaths', color='red', label='Novas mortes')
 plt.title('Novas mortes por COVID-19 no Brasil')
@@ -53,7 +53,7 @@ plt.ylabel('Mortes')
 plt.tight_layout()
 plt.show()
 
-# 📈 Gráfico: Total de vacinações
+# Gráfico: Total de vacinações
 plt.figure()
 sns.lineplot(data=df_brasil, x='date', y='total_vaccinations', color='green', label='Vacinações acumuladas')
 plt.title('Total de vacinações contra COVID-19 no Brasil')
