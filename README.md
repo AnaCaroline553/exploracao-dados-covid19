@@ -21,5 +21,20 @@ Este projeto tem como objetivo analisar os dados da pandemia de COVID-19 no Bras
 ## 🧪 Como executar
 
 1. **Clone o repositório:**
-2. https://github.com/AnaCaroline553/exploracao-dados-covid19.git
-3. 
+ https://github.com/AnaCaroline553/exploracao-dados-covid19.git
+
+2. **(Opcional) Crie um ambiente virtual e ative:**
+python -m venv venv
+source venv/bin/activate # Linux/macOS
+venv\Scripts\activate # Windows
+
+3. **Instale as dependências:**
+pip install -r requisitos.txt
+
+4. **Execute o notebook:**
+jupyter notebook notebooks/analise_covid.ipynb
+
+
+
+
+   
