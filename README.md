@@ -18,6 +18,20 @@ Este projeto tem como objetivo analisar os dados da pandemia de COVID-19 no Bras
 - Seaborn
 
 ## 📁 Estrutura do Projeto
+exploracao-dados-covid19/
+│
+├── dados/
+│ └── covid_brasil.csv
+│
+├── notebooks/
+│ └── analise_covid.ipynb
+│
+├── imagens/
+│ ├── grafico_casos.png
+│ └── grafico_mortes.png
+│
+├── README.md
+└── requisitos.txt
 ## 🧪 Como executar
 
 1. **Clone o repositório:**
